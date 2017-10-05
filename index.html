@@ -42,6 +42,9 @@
     margin: 5em 0em 0em;
     padding: 5em 0em;
   }
+  .hidden { display: none; }
+  input { margin-bottom: 32px; }
+  .dropdown {margin-bottom: 32px;}
   </style>
 
 </head>
@@ -88,25 +91,88 @@
       <button class="massive negative circular ui icon button"id = "money_out" onclick = "money_out()" value = "release">
         <i class="icon sign out"></i>
       </button>
+       <button class="massive circular ui icon button" id = "charts" onclick = "chart_display()">
+        <i class="icon bar chart"></i>
+      </button>
+      <button class="massive circular ui icon button" id = "database" onclick = "database_view()">
+        <i class="icon database"></i>
+      </button>
       <button class="massive circular ui icon button" id = "settings">
         <i class="icon settings"></i>
       </button>
       <button class="massive circular ui icon button">
         <i class="icon edit"></i>
       </button>
-      <button class="massive circular ui icon button" id = "charts" onclick = "chart_display()">
-        <i class="icon bar chart"></i>
-      </button>
-      <button class="massive circular ui icon button" id = "database" onclick = "database_view()">
-        <i class="icon database"></i>
-      </button>
+     
       <div id = "not_main">
           <p>
 
           </p>
     <p id="para_content">Did you buy something? Got some extra money from grandma? Tell me!</p>
                   </div>
-          
+     
+    <div class="hidden main text container" id="expense_input">
+      So, what have you spent your money for? <br>
+      
+      <div class="ui left icon input">
+        <input type="text" id="expense_name" placeholder="What?">
+      </div>
+      
+      Where ?
+      
+       <div class="ui left icon input">
+        <input type="text" id="expense_location" placeholder="Where?">
+      </div>
+      
+      
+      
+      
+      How much money you have spent? <br>
+      
+      
+        <div class="ui left icon input">
+        <input type="number" id="expense_value" placeholder="How many?">
+        <i class="payment icon"></i>
+      </div>
+      What was the currency? <br> 
+
+      <div class="ui fluid search selection dropdown">
+  <input type="hidden" name="expense_currency">
+  <i class="dropdown icon"></i>
+  <div class="default text">Select currency</div>
+  <div class="menu">
+  <div class="item" data-value="GBP">Pound Sterling</div>
+  <div class="item" data-value="PLN">Polish Zloty</div>
+  <div class="item" data-value="DOLLAR">American Dollar</div>
+  <div class="item" data-value="EURO">Euro</div>
+  </div>
+ </div>
+  Category 
+  <div class="ui fluid search selection dropdown">
+  <input type="hidden" name="expense_category">
+  <i class="dropdown icon"></i>
+  <div class="default text">Expense category</div>
+  <div class="menu">
+  <div class="item" data-value="food">Food </div>
+  <div class="item" data-value="clothing">Clothing</div>
+  <div class="item" data-value="cosmetics">Cosmetics</div>
+  <div class="item" data-value="oyster">Oyster Card</div>
+  </div>
+</div>
+
+What was the day of the expense?
+ <div class="ui left icon input">
+        <input type="datetime" id="expense_date" placeholder="Date">
+      </div>
+
+
+
+
+
+</div>
+ </div>
+      
+      </div>
   </div>
   <div class="ui inverted vertical footer segment">
     <div class="ui center aligned container">
