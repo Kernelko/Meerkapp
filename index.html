@@ -50,12 +50,13 @@
 </head>
 <body>
 
-  <div class="ui fixed inverted menu">
+<div class="ui fixed inverted menu">
     <div class="ui container">
       <a href="#" class="header item">
         <img class="logo" src="./blop.jpg">
-        MeerkatPenny
+      MeerkatPenny
       </a>
+      
       <a href="#" class="item">Home</a>
       <div class="ui simple dropdown item">
         Dropdown <i class="dropdown icon"></i>
@@ -78,13 +79,9 @@
     </div>
   </div>
 
-  <div class="ui main text container" id = "main">
+<div class="ui main text container" id = "main">
     <h1 class="ui header">Welcome to MeerkatPenny</h1>
-    
-    <!-- <div class="ui left icon input">
-        <input type="text" id="how_many_pennies" placeholder="Pennies gone...">
-        <i class="payment icon"></i>
-      </div> -->
+     <p id="para_content">Did you buy something? Got some extra money from grandma? Tell me!</p>
       <button class="massive positive circular ui icon button" id = "money_in" onclick = "money_in()" value = "release">
         <i class="icon sign in"></i>
       </button>
@@ -102,75 +99,141 @@
       </button>
       <button class="massive circular ui icon button">
         <i class="icon edit"></i>
-      </button>
-     
-      <div id = "not_main">
-          <p>
+      </button> 
 
-          </p>
-    <p id="para_content">Did you buy something? Got some extra money from grandma? Tell me!</p>
-                  </div>
-                  <!--end of not main-->
-     
-    <div class="hidden main text container" id="expense_input">
+ 
+<div id = "content">
+  <div class="hidden main text container" id="expense_input">
+    
+    <p id="WHAT">
       So, what have you spent your money for? <br>
-      
       <div class="ui left icon input">
         <input type="text" id="expense_name" placeholder="Enter name">
       </div>
-      
-      
-      Where ?
-      
+    </p><!--end of WHAT-->
+    
+    <p id="WHERE">
+      Where were you? <br>
        <div class="ui left icon input">
         <input type="text" id="expense_location" placeholder="Enter location">
       </div>
-      
+    </p><!--end of WHERE-->
+    
+    <p id="AMOUNT">
       How much money you have spent? <br>  
         <div class="ui left icon input">
         <input type="number" id="expense_value" placeholder="Enter amount">
         <i class="payment icon"></i>
-      </div>
-      
+        </div>
+    </p> <!--end of AMOUNT-->
+    
+    <p id="CURRENCY">
       What was the currency? <br> 
-
       <div class="ui fluid search selection dropdown">
-  <input type="hidden" name="expense_currency">
-  <i class="dropdown icon"></i>
-  <div class="default text">Select currency</div>
-  <div class="menu">
-  <div class="item" data-value="GBP">Pound Sterling</div>
-  <div class="item" data-value="PLN">Polish Zloty</div>
-  <div class="item" data-value="DOLLAR">American Dollar</div>
-  <div class="item" data-value="EURO">Euro</div>
-  </div>
-  <!--end of menu-->
- </div>
- <!--end of dropdown-->
- 
-  Category 
-  <div class="ui fluid search selection dropdown">
-  <input type="hidden" name="expense_category">
-  <i class="dropdown icon"></i>
-  <div class="default text">Expense category</div>
-  <div class="menu">
-  <div class="item" data-value="food">Food </div>
-  <div class="item" data-value="clothing">Clothing</div>
-  <div class="item" data-value="cosmetics">Cosmetics</div>
-  <div class="item" data-value="oyster">Oyster Card</div>
-  </div><!--end of menu-->
-</div><!--end of dropdown-->
+      <input type="hidden" name="expense_currency">
+      <i class="dropdown icon"></i>
+      <div class="default text">Select currency</div>
+      <div class="menu">
+      <div class="item" data-value="GBP">Pound Sterling</div>
+      <div class="item" data-value="PLN">Polish Zloty</div>
+      <div class="item" data-value="DOLLAR">American Dollar</div>
+      <div class="item" data-value="EURO">Euro</div>
+      </div> <!-- end of MENU-->
+      </div> <!-- end of DROPDOWN-->
+    </p> <!--end of CURRENCY  -->
+    
+    <p id = "CATEGORY">
+    Category 
+    <div class="ui fluid search selection dropdown">
+    <input type="hidden" name="expense_category">
+    <i class="dropdown icon"></i>
+    <div class="default text">Expense category</div>
+    <div class="menu">
+    <div class="item" data-value="food">Food </div>
+    <div class="item" data-value="clothing">Clothing</div>
+    <div class="item" data-value="cosmetics">Cosmetics</div>
+    <div class="item" data-value="oyster">Oyster Card</div>
+    </div><!--end of menu-->
+    </div><!--end of dropdown-->
+    </p> <!-- end of CATEGORY-->
 
-What was the day of the expense?
- <div class="ui left icon input">
+    <p id="DATE">
+    What was the day of the expense?
+      <div class="ui left icon input">
         <input type="datetime" id="expense_date" placeholder="Enter date and time">
-      </div>
+      </div> <!-- end of input-->
+    </p> <!-- end of DATE-->
       
-</div><!--end of container-->
- 
-  </div> <!--end of main text container -->
+</div><!--end of EXPENSE INPUT-->
+
+
+<div class="hidden main text container" id="income_input">
   
-  <div class="ui inverted vertical footer segment">
+  <p id = "WHAT_IN">
+  So, what's the money? <br>
+      <div class="ui left icon input">
+        <input type="text" id="income_name" placeholder="Enter name">
+      </div>
+  </p> <!--end of WHAT IN-->
+  
+  <p id = "WHERE_IN">
+  Where is it from? <br>
+    <div class="ui left icon input">
+      <input type="text" id="income_source" placeholder="Enter source">
+    </div>
+  </p> <!-- end of WHERE IN-->
+  
+  <p id = "AMOUNT IN">
+  How much you've got? 
+     <div class="ui left icon input">
+      <input type="number" id="income_value" placeholder="Enter amount">
+      <i class="payment icon"></i>
+     </div>
+  </p> <!-- end of AMOUNT IN-->
+  
+  <p id = "CURRENCY IN">
+  What was the currency? 
+    <div class="ui fluid search selection dropdown">
+    <input type="hidden" name="income_currency">
+    <i class="dropdown icon"></i>
+    <div class="default text">Select currency</div>
+    <div class="menu">
+    <div class="item" data-value="GBP">Pound Sterling</div>
+    <div class="item" data-value="PLN">Polish Zloty</div>
+    <div class="item" data-value="DOLLAR">American Dollar</div>
+    <div class="item" data-value="EURO">Euro</div>
+    </div> <!-- end of menu-->
+    </div><!-- end of dropdown-->
+   </p> <!-- end of CURRENCY IN-->
+  
+  <p id = "CATEGORY IN">
+  Category 
+    <div class="ui fluid search selection dropdown">
+    <input type="hidden" name="income_category">
+    <i class="dropdown icon"></i>
+    <div class="default text">Income category</div>
+    <div class="menu">
+    <div class="item" data-value="food">Family Gift </div>
+    <div class="item" data-value="clothing">Payment</div>
+    <div class="item" data-value="cosmetics">Tips</div>
+    <div class="item" data-value="oyster">Other</div>
+    </div><!--end of menu-->
+    </div><!-- end of dropdown-->
+   </p><!-- end of category in-->
+   
+  <p id = "DATE IN">
+  What was the day?
+    <div class="ui left icon input">
+      <input type="datetime" id="income_date" placeholder="Enter date and time">
+    </div>
+  </p> <!--end of DATE IN-->
+    
+</div><!-- end of INCOME INPUT-->
+
+</div><!-- end of MAIN CONTENT-->
+ 
+  
+<div class="ui inverted vertical footer segment">
     <div class="ui center aligned container">
       <div class="ui stackable inverted divided grid">
         <div class="three wide column">
@@ -183,55 +246,7 @@ What was the day of the expense?
           </div>
         </div>
 
-   <div class="hidden main text container" id="income_input">
-      So, what's the money? <br>
-      
-      <div class="ui left icon input">
-        <input type="text" id="income_name" placeholder="Enter name">
-      </div>
-      
-      Where is it from?
-      
-       <div class="ui left icon input">
-        <input type="text" id="income_source" placeholder="Enter source">
-      </div>
-      How much you've got? 
-        <div class="ui left icon input">
-        <input type="number" id="income_value" placeholder="Enter amount">
-        <i class="payment icon"></i>
-      </div>
-      What was the currency? 
-
-      <div class="ui fluid search selection dropdown">
-  <input type="hidden" name="income_currency">
-  <i class="dropdown icon"></i>
-  <div class="default text">Select currency</div>
-  <div class="menu">
-  <div class="item" data-value="GBP">Pound Sterling</div>
-  <div class="item" data-value="PLN">Polish Zloty</div>
-  <div class="item" data-value="DOLLAR">American Dollar</div>
-  <div class="item" data-value="EURO">Euro</div>
-  </div>
- </div>
-  Category 
-  <div class="ui fluid search selection dropdown">
-  <input type="hidden" name="income_category">
-  <i class="dropdown icon"></i>
-  <div class="default text">Income category</div>
-  <div class="menu">
-  <div class="item" data-value="food">Family Gift </div>
-  <div class="item" data-value="clothing">Payment</div>
-  <div class="item" data-value="cosmetics">Tips</div>
-  <div class="item" data-value="oyster">Other</div>
-  </div>
-</div>
-
-What was the day?
- <div class="ui left icon input">
-        <input type="datetime" id="income_date" placeholder="Enter date and time">
-      </div>
-</div>
- </div>   
+ 
       </div>
   </div>
   </div>
