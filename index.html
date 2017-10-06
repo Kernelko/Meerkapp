@@ -110,6 +110,7 @@
           </p>
     <p id="para_content">Did you buy something? Got some extra money from grandma? Tell me!</p>
                   </div>
+                  <!--end of not main-->
      
     <div class="hidden main text container" id="expense_input">
       So, what have you spent your money for? <br>
@@ -118,22 +119,19 @@
         <input type="text" id="expense_name" placeholder="Enter name">
       </div>
       
+      
       Where ?
       
        <div class="ui left icon input">
         <input type="text" id="expense_location" placeholder="Enter location">
       </div>
       
-      
-      
-      
-      How much money you have spent? <br>
-      
-      
+      How much money you have spent? <br>  
         <div class="ui left icon input">
         <input type="number" id="expense_value" placeholder="Enter amount">
         <i class="payment icon"></i>
       </div>
+      
       What was the currency? <br> 
 
       <div class="ui fluid search selection dropdown">
@@ -146,7 +144,10 @@
   <div class="item" data-value="DOLLAR">American Dollar</div>
   <div class="item" data-value="EURO">Euro</div>
   </div>
+  <!--end of menu-->
  </div>
+ <!--end of dropdown-->
+ 
   Category 
   <div class="ui fluid search selection dropdown">
   <input type="hidden" name="expense_category">
@@ -157,23 +158,18 @@
   <div class="item" data-value="clothing">Clothing</div>
   <div class="item" data-value="cosmetics">Cosmetics</div>
   <div class="item" data-value="oyster">Oyster Card</div>
-  </div>
-</div>
+  </div><!--end of menu-->
+</div><!--end of dropdown-->
 
 What was the day of the expense?
  <div class="ui left icon input">
         <input type="datetime" id="expense_date" placeholder="Enter date and time">
       </div>
-
-
-
-
-
-</div>
- </div>
       
-      </div>
-  </div>
+</div><!--end of container-->
+ 
+  </div> <!--end of main text container -->
+  
   <div class="ui inverted vertical footer segment">
     <div class="ui center aligned container">
       <div class="ui stackable inverted divided grid">
@@ -186,20 +182,70 @@ What was the day of the expense?
             <a href="#" class="item">Link Four</a>
           </div>
         </div>
-        
 
+   <div class="hidden main text container" id="income_input">
+      So, what's the money? <br>
+      
+      <div class="ui left icon input">
+        <input type="text" id="income_name" placeholder="Enter name">
+      </div>
+      
+      Where is it from?
+      
+       <div class="ui left icon input">
+        <input type="text" id="income_source" placeholder="Enter source">
+      </div>
+      How much you've got? 
+        <div class="ui left icon input">
+        <input type="number" id="income_value" placeholder="Enter amount">
+        <i class="payment icon"></i>
+      </div>
+      What was the currency? 
 
+      <div class="ui fluid search selection dropdown">
+  <input type="hidden" name="income_currency">
+  <i class="dropdown icon"></i>
+  <div class="default text">Select currency</div>
+  <div class="menu">
+  <div class="item" data-value="GBP">Pound Sterling</div>
+  <div class="item" data-value="PLN">Polish Zloty</div>
+  <div class="item" data-value="DOLLAR">American Dollar</div>
+  <div class="item" data-value="EURO">Euro</div>
+  </div>
+ </div>
+  Category 
+  <div class="ui fluid search selection dropdown">
+  <input type="hidden" name="income_category">
+  <i class="dropdown icon"></i>
+  <div class="default text">Income category</div>
+  <div class="menu">
+  <div class="item" data-value="food">Family Gift </div>
+  <div class="item" data-value="clothing">Payment</div>
+  <div class="item" data-value="cosmetics">Tips</div>
+  <div class="item" data-value="oyster">Other</div>
+  </div>
+</div>
 
-
-
-
-
-
-
-
-
-
-
+What was the day?
+ <div class="ui left icon input">
+        <input type="datetime" id="income_date" placeholder="Enter date and time">
+      </div>
+</div>
+ </div>   
+      </div>
+  </div>
+  </div>
+  <div class="ui inverted vertical footer segment">
+    <div class="ui center aligned container">
+      <div class="ui stackable inverted divided grid">
+        <div class="three wide column">
+          <h4 class="ui inverted header">Group 1</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Link One</a>
+            <a href="#" class="item">Link Two</a>
+            <a href="#" class="item">Link Three</a>
+            <a href="#" class="item">Link Four</a>
+          </div>
 
 
 

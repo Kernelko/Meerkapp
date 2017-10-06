@@ -9,6 +9,7 @@
 function money_in(){
   //    button click
   document.getElementById("para_content").innerHTML = "Pieniązki otrzymane";
+  	$("#income_input").removeClass("hidden");
 
 }
 
