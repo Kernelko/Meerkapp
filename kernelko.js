@@ -8,16 +8,15 @@
         //});
 function money_in(){
   //    button click
-  document.getElementById("para_content").innerHTML = "Pieniązki otrzymane";
   	$("#income_input").removeClass("hidden");
+    $("#expense_input").addClass("hidden");
 
 }
 
 function money_out(){
     //    button click
-    document.getElementById("para_content").innerHTML = "Pieniążki wydane"
      	$("#expense_input").removeClass("hidden");
-       
+      $("#income_input").addClass("hidden");
      let expense_name = $("#expense_name").val();
      let expense_location=$("#expense_location").val();
      let expense_value=$("#expense_value").val();
@@ -29,12 +28,10 @@ function money_out(){
 
   function chart_display(){
     //    button click
-    document.getElementById("para_content").innerHTML = "Wyswietlam wykresiki"
     
   }
   function database_view(){
     //    button click
-    document.getElementById("para_content").innerHTML = "Pokazuje baze danych"
     
   }
 $("settings").click(function()
