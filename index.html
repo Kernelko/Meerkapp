@@ -83,11 +83,17 @@
 <div class="ui main text container" id = "main">
     <h1 class="ui header">Welcome to MeerkatPenny</h1>
      <p id="para_content">Did you buy something? Got some extra money from grandma? Tell me!</p>
-      <button class="massive positive circular ui icon button" id = "money_in" onclick = "money_in()" value = "release">
+          <!--<button class="massive positive circular ui icon button" id = "money_in" onclick = "money_in()" value = "release">
         <i class="icon sign in"></i>
       </button>
       <button class="massive negative circular ui icon button"id = "money_out" onclick = "money_out()" value = "release">
         <i class="icon sign out"></i>
+      </button>
+      <button class="massive blue circular ui icon button"id = "loan" onclick = "loan()" value = "release">
+        <i class="icon handshake"></i>
+      </button>-->
+      <button class="massive positive circular ui icon button" id = "money" onclick = "money()" value = "release">
+        <i class="icon money"></i>
       </button>
        <button class="massive circular ui icon button" id = "charts" onclick = "chart_display()">
         <i class="icon bar chart"></i>
@@ -104,34 +110,41 @@
 
  
 <div id = "content">
-  <div class="hidden main text container" id="expense_input">
+  
+  </br>
+  <div class="large ui buttons">
+  <button class="ui button">Income</button>
+  <button class="ui button">Expense</button>
+  <button class="ui button">Loan</button>
+</div>
+  <div class="main text container" id="transfer_container">
     
     <p id="WHAT">
-      So, what have you spent your money for? <br>
+        <br>
       <div class="ui left icon input">
-        <input type="text" id="expense_name" placeholder="Enter name">
+        <input type="text" id="transfer_name" placeholder="Enter name">
       </div>
     </p><!--end of WHAT-->
     
-    <p id="WHERE">
-      Where were you? <br>
+    <p id="WHERE/WHO">
+      <br>
        <div class="ui left icon input">
-        <input type="text" id="expense_location" placeholder="Enter location">
+        <input type="text" id="transfer_location" placeholder="Source/Location">
       </div>
     </p><!--end of WHERE-->
     
     <p id="AMOUNT">
-      How much money you have spent? <br>  
+      <br>
         <div class="ui left icon input">
-        <input type="number" id="expense_value" placeholder="Enter amount">
+        <input type="number" id="transfer_value" placeholder="Enter amount">
         <i class="payment icon"></i>
         </div>
     </p> <!--end of AMOUNT-->
     
     <p id="CURRENCY">
-      What was the currency? <br> 
+ <br> 
       <div class="ui fluid search selection dropdown">
-      <input type="hidden" name="expense_currency">
+      <input type="hidden" name="transfer_currency">
       <i class="dropdown icon"></i>
       <div class="default text">Select currency</div>
       <div class="menu">
@@ -144,11 +157,11 @@
     </p> <!--end of CURRENCY  -->
     
     <p id = "CATEGORY">
-    Category 
+    <br>
     <div class="ui fluid search selection dropdown">
-    <input type="hidden" name="expense_category">
+    <input type="hidden" name="transfer_category">
     <i class="dropdown icon"></i>
-    <div class="default text">Expense category</div>
+    <div class="default text">Category</div>
     <div class="menu">
     <div class="item" data-value="food">Food </div>
     <div class="item" data-value="clothing">Clothing</div>
@@ -159,78 +172,13 @@
     </p> <!-- end of CATEGORY-->
 
     <p id="DATE">
-    What was the day of the expense?
+    <br>
       <div class="ui left icon input">
-        <input type="datetime" id="expense_date" placeholder="Enter date and time">
+        <input type="datetime" id="transfer_date" placeholder="Enter date and time">
       </div> <!-- end of input-->
     </p> <!-- end of DATE-->
       
 </div><!--end of EXPENSE INPUT-->
-
-
-<div class="hidden main text container" id="income_input">
-  
-  <p id = "WHAT_IN">
-  So, what's the money? <br>
-      <div class="ui left icon input">
-        <input type="text" id="income_name" placeholder="Enter name">
-      </div>
-  </p> <!--end of WHAT IN-->
-  
-  <p id = "WHERE_IN">
-  Where is it from? <br>
-    <div class="ui left icon input">
-      <input type="text" id="income_source" placeholder="Enter source">
-    </div>
-  </p> <!-- end of WHERE IN-->
-  
-  <p id = "AMOUNT IN">
-  How much you've got? 
-     <div class="ui left icon input">
-      <input type="number" id="income_value" placeholder="Enter amount">
-      <i class="payment icon"></i>
-     </div>
-  </p> <!-- end of AMOUNT IN-->
-  
-  <p id = "CURRENCY IN">
-  What was the currency? 
-    <div class="ui fluid search selection dropdown">
-    <input type="hidden" name="income_currency">
-    <i class="dropdown icon"></i>
-    <div class="default text">Select currency</div>
-    <div class="menu">
-    <div class="item" data-value="GBP">Pound Sterling</div>
-    <div class="item" data-value="PLN">Polish Zloty</div>
-    <div class="item" data-value="DOLLAR">American Dollar</div>
-    <div class="item" data-value="EURO">Euro</div>
-    </div> <!-- end of menu-->
-    </div><!-- end of dropdown-->
-   </p> <!-- end of CURRENCY IN-->
-  
-  <p id = "CATEGORY IN">
-  Category 
-    <div class="ui fluid search selection dropdown">
-    <input type="hidden" name="income_category">
-    <i class="dropdown icon"></i>
-    <div class="default text">Income category</div>
-    <div class="menu">
-    <div class="item" data-value="food">Family Gift </div>
-    <div class="item" data-value="clothing">Payment</div>
-    <div class="item" data-value="cosmetics">Tips</div>
-    <div class="item" data-value="oyster">Other</div>
-    </div><!--end of menu-->
-    </div><!-- end of dropdown-->
-   </p><!-- end of category in-->
-   
-  <p id = "DATE IN">
-  What was the day?
-    <div class="ui left icon input">
-      <input type="datetime" id="income_date" placeholder="Enter date and time">
-    </div>
-  </p> <!--end of DATE IN-->
-    
-</div><!-- end of INCOME INPUT-->
-
 </div><!-- end of MAIN CONTENT-->
  
   
